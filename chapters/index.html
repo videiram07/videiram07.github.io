@@ -54,7 +54,7 @@
 /* Slideshow container */
 .slideshow-container {
   max-width: 40em;
-  position:auto;
+  
   margin: auto;
 justify-content:center;
 align-items:center;
@@ -64,21 +64,19 @@ align-content:center;
 
 /* Hide the images by default */
 .mySlides {
-  display: ;
+  display:flex;
 justify-content:center;
 align-items:center;
 align-content:center;
-position:auto;
+display:inline-flex
 }
 
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
-  position: absolute;
-  top:70rem;
+  vertical-align:text-top;
   width:5rem;
-  margin:auto;
-  padding: 1rem;
+  padding:4rem;
   color: blue;
   font-weight:bold;
   font-size:25px;
@@ -104,8 +102,7 @@ align-content:center
   background-color:black;
     color:white;
   font-size: 15px;
-  padding: 3rem;
-  position: absolute;
+  padding-bottom: 5rem;
   width: 100%;
   text-align: center;
 justify-content: center;
