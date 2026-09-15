@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Postbreak Outbreak</title>
+        <style type= "text/css">
+            body{
+                background-color: darkred;
+                width:90%;
+                justify-content:center;
+                margin:4rem;
+                align-content:center;
+                align-items:flex-start
+            }
+            div.page-container{
+                background-color:black;
+                display: inline-flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                margin:auto
+            }
+            .navigation a {
+                color:white;
+                text-decoration: none;
+                font-size: 2rem;
+                display:inline-flex;
+                justify-content:center;
+                margin:auto;
+                padding:1rem;
+                font-family:Courier, monospace
+            }
+            .navigation img{
+                width:10rem;
+                vertical-align:middle
+            }
+            a:hover {
+                color:darkred;
+            }
+            a:visited {
+                text-decoration:none
+            }
+            .main-container{
+                display:inline-flex
+            }
+            .main-container p{
+                margin:3rem;
+                color:white;
+            }
+            
+            * {box-sizing:border-box}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 40em;
+  position:auto;
+  margin: auto;
+justify-content:center;
+align-items:center;
+align-content:center;
+    display:inline-flex
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: ;
+justify-content:center;
+align-items:center;
+align-content:center;
+position:auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top:70rem;
+  width:5rem;
+  margin:auto;
+  padding: 1rem;
+  color: blue;
+  font-weight:bold;
+  font-size:25px;
+  transition:0.6s ease;
+  border-radius:0 3px 3px 0;
+  user-select: none;
+justify-content:center;
+align-items:center;
+align-content:center
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 6px 0 0 6px;
+    justify-content:center;
+align-items:center;
+align-content:center
+}
+
+/* Caption text */
+.text {
+  background-color:black;
+    color:white;
+  font-size: 15px;
+  padding: 3rem;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+justify-content: center;
+            align-items: flex-start;
+            align-content: center; 
+            margin:auto;
+    font-family:Courier, monospace}
+.main-container img{
+    justify-content: center;
+            align-items: flex-start;
+            align-content: center; 
+            margin:auto
+}
+    
+
+}
+        </style>
+        <script type= "text/javascript">
+            /*tis for the chapter pages to scroll... someone kill me already*/
+        let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+        </script>
+    </head>
+    <body>
+       <div class="page-container">
+        <div class= "navigation">
+        <nav>
+           <p><img src= "regular_logo_copy.png">
+<a href="../index.html">Home</a>
+            <a href="../characters/index.html">Characters</a>
+            <a href="../chapters/index.html">Chapters</a>
+            <a href="../extra_art_gallery/index.html">Art Gallery</a>
+               <a href="../about_the_artist/index.html">The Artist</a></p></nav></div>
+    <div class="main-container">
+    <div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="po_chapter_1_cover_copy.jpg" style="width:100%">
+      <div class="text"><p>Chapter 1</p></div>
+  </div>
+  <div class="mySlides fade">
+    <img src="po_chapter_001_page_01.jpg" style="width:100%">
+    <div class="text">Chapter 1: Page 1</div>
+  </div>
+  <div class="mySlides fade">
+    <img src="po_chapter_001_page_02.jpg" style="width:100%">
+    <div class="text">Chapter 1: Page 2</div>
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+    </div></div>
+    </body>
+</html>
