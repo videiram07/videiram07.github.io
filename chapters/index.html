@@ -68,9 +68,11 @@ align-content:center;
 justify-content:center;
 align-items:center;
 align-content:center;
-display:inline-flex
+display:inline-flex;
+    display:none
 }
-
+.mySlides first{
+display:block}
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
@@ -164,9 +166,9 @@ function showSlides(n) {
                <a href="../about_the_artist">The Artist</a></p></nav></div>
     <div class="main-container">
     <div class="slideshow-container">
-  <div class="mySlides fade">
+  <div class="mySlides fade first">
     <img src="po_chapter_1_cover_copy.jpg" style="width:100%">
-      <div class="text"><p>Chapter 1</p></div>
+      <div class="text"><p>Chapter 1</p></div></div>
   </div>
   <div class="mySlides fade">
     <img src="po_chapter_001_page_01.jpg" style="width:100%">
